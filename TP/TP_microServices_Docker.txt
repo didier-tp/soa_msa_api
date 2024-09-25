@@ -1,0 +1,8 @@
+Récupérer un clone (via git clone ou code/download_zip) de https://github.com/didier-mycontrib/msa-vagrant
+S'intéresser à la sous partie with-wsl2
+Faire fonctionner cela sous Windows/WSL2/Ubuntu
+ou bien dans virtualBox+Vagrant
+
+Selon configuration technique et temps disponible:
+  - soit "demo" de la part du formateur
+  - soit "TD" guidé

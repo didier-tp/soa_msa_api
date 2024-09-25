@@ -1,0 +1,30 @@
+Se connecter à https://www.d-defrance.fr/tp/tp-api-html
+pour explorer un paquet de WS-REST (devise-api , product-api , …)
+
+1) version non sécurisée (/public):
+==================================
+a) quelques appels en mode "GET":
+	https://www.d-defrance.fr/tp/devise-api/v1/public/devises
+	https://www.d-defrance.fr/tp/devise-api/v1/public/convert?source=EUR&target=USD&amount=50
+b) CRUD avec POSTMAN (GET,POST,PUT,DELETE)
+	https://www.d-defrance.fr/tp/devise-api/v1/public/devises , exemple: { "code" : "DDK1" , "name" : "Couronne1" , "change" : 7.1 }
+        variantes : avec ou sans ?v=true sur appels en PUT , DELETE , ...
+
+2) version sécurisée (/private)
+==============================
+  2a) sans oauth2/oidc:
+ ---------------------
+https://www.d-defrance.fr/tp/standalone-login-api/v1/public/auth à déclencher en mode POST via postman
+  requete de type  { "username" : "user1 ou admin1" , "password" : "pwd1 ou wrongPwd" } 
+  reponse de type username,status,message,token,scope
+
+déclencher en mode PUT (via Postman)
+https://www.d-defrance.fr/tp/devise-api/v1/private/devises/JPY
+avec par exemple { "code":"JPY" , "name":"Yen","change":157.875088}
+et avec ou sans retransmission du token (dans champ Authorization: Bearer … de l'entête HTTP)
+
+
+
+ 2b) avec oauth2/oidc:
+  --------------------
+    via https://github.com/didier-mycontrib/tp-app ou bien https://www.d-defrance.fr/tp/tp-api-html
