@@ -1,4 +1,4 @@
-Se connecter à https://www.d-defrance.fr/tp/tp-api-html
+Se connecter à https://www.d-defrance.fr/tp/tp-api-html/index.html
 pour explorer un paquet de WS-REST (devise-api , product-api , …)
 
 1) version non sécurisée (/public):
